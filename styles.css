@@ -13,16 +13,16 @@
     --accent: #ff6b6b;
     --accent2: #ffd93d;
     --gold: #d4af37;
-    --white: #ce93d8;
-    --light: #ce93d8;
-    --light2: #ce93d8;
+    --white: #ffffff;
+    --light: #fdf0f8;
+    --light2: #f8f0ff;
     --gray: #6c757d;
-    --gray-light:#e91e8c;
+    --gray-light:#f8f9fa;
     --dark: #1a1a2e;
     --dark2: #16213e;
     --text: #333333;
     --text-light: #666666;
-    --border: #e91e8c;
+    --border: #e0e0e0;
     --shadow: 0 10px 40px rgba(233, 30, 140, 0.15);
     --shadow-dark: 0 20px 60px rgba(0, 0, 0, 0.3);
     --shadow-card: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -311,7 +311,7 @@ input, textarea, select {
 
 .logo-sub {
     font-size: 0.65rem;
-    color: #e91e8c;
+    color: rgba(255,255,255,0.8);
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: var(--transition);
@@ -335,7 +335,7 @@ input, textarea, select {
     border-radius: var(--radius-xl);
     font-size: 0.85rem;
     font-weight: 600;
-    color: #e91e8c;
+    color: rgba(255,255,255,0.9);
     transition: var(--transition);
     position: relative;
 }
