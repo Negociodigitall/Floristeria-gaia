@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Floristería y Bisutería Gaia - Las flores más hermosas y bisutería exclusiva en Nicoya, Guanacaste">
+    <meta name="keywords" content="floristería, bisutería, flores, Nicoya, Guanacaste, arreglos florales">
+    <meta name="author" content="Floristería y Bisutería Gaia">
+    <title>Floristería y Bisutería Gaia | Nicoya, Guanacaste</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========== LOADER ========== -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-flower">🌸</div>
+            <div class="loader-text">Floristería Gaia</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CURSOR PERSONALIZADO ========== -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- ========== PARTÍCULAS DE FONDO ========== -->
+    <div id="particles-container"></div>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🌸</span>
+                <div class="logo-text">
+                    <span class="logo-main">Gaia</span>
+                    <span class="logo-sub">Floristería & Bisutería</span>
+                </div>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#inicio" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#nosotros" class="nav-link">
+                        <i class="fas fa-leaf"></i>
+                        <span>Nosotros</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#servicios" class="nav-link">
+                        <i class="fas fa-spa"></i>
+                        <span>Servicios</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#catalogo" class="nav-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Catálogo</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#galeria" class="nav-link">
+                        <i class="fas fa-images"></i>
+                        <span>Galería</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonios" class="nav-link">
+                        <i class="fas fa-star"></i>
+                        <span>Opiniones</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacto" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contacto</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-cart" id="cartBtn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="btn-whatsapp-nav" onclick="openWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="inicio">
+        <div class="hero-slider" id="heroSlider">
+            <div class="hero-slide active" style="background: linear-gradient(135deg, rgba(255,182,193,0.8), rgba(255,105,180,0.6)), url('https://images.unsplash.com/photo-1487530811015-780f2f5e3f6e?w=1920') center/cover;">
+                <div class="hero-content">
+                    <div class="hero-badge">✨ Bienvenidos a Gaia</div>
+                    <h1 class="hero-title">
+                        <span class="title-line">Donde las Flores</span>
+                        <span class="title-line accent">Hablan por Ti</span>
+                    </h1>
+                    <p class="hero-subtitle">Arreglos florales únicos y bisutería exclusiva para cada momento especial de tu vida</p>
+                    <div class="hero-buttons">
+                        <a href="#catalogo" class="btn-primary">
+                            <i class="fas fa-eye"></i>
+                            Ver Catálogo
+                        </a>
+                        <a href="#contacto" class="btn-secondary">
+                            <i class="fas fa-phone"></i>
+                            Contáctanos
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="500">0</span>
+                            <span class="stat-label">Clientes Felices</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="150">0</span>
+                            <span class="stat-label">Arreglos Únicos</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="10">0</span>
+                            <span class="stat-label">Años de Experiencia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background: linear-gradient(135deg, rgba(147,112,219,0.8), rgba(75,0,130,0.6)), url('https://images.unsplash.com/photo-1490750967868-88df5691166b?w=1920') center/cover;">
+                <div class="hero-content">
+                    <div class="hero-badge">💎 Bisutería Exclusiva</div>
+                    <h1 class="hero-title">
+                        <span class="title-line">Accesorios que</span>
+                        <span class="title-line accent">Brillan como Tú</span>
+                    </h1>
+                    <p class="hero-subtitle">Descubre nuestra colección de bisutería artesanal, diseñada para realzar tu belleza natural</p>
+                    <div class="hero-buttons">
+                        <a href="#catalogo" class="btn-primary">
+                            <i class="fas fa-gem"></i>
+                            Ver Bisutería
+                        </a>
+                        <a href="#nosotros" class="btn-secondary">
+                            <i class="fas fa-info-circle"></i>
+                            Conoce Más
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background: linear-gradient(135deg, rgba(255,160,122,0.8), rgba(220,20,60,0.6)), url('https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=1920') center/cover;">
+                <div class="hero-content">
+                    <div class="hero-badge">🎁 Regalos Especiales</div>
+                    <h1 class="hero-title">
+                        <span class="title-line">El Regalo Perfecto</span>
+                        <span class="title-line accent">Para Cada Ocasión</span>
+                    </h1>
+                    <p class="hero-subtitle">Bodas, cumpleaños, aniversarios... Hacemos que cada momento sea inolvidable</p>
+                    <div class="hero-buttons">
+                        <a href="#servicios" class="btn-primary">
+                            <i class="fas fa-gift"></i>
+                            Nuestros Servicios
+                        </a>
+                        <button class="btn-secondary" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                            Pedir Ahora
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-controls">
+            <button class="hero-prev" id="heroPrev"><i class="fas fa-chevron-left"></i></button>
+            <div class="hero-dots" id="heroDots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <button class="hero-next" id="heroNext"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Desplázate</span>
+        </div>
+        <div class="hero-floating-elements">
+            <div class="floating-el el-1">🌹</div>
+            <div class="floating-el el-2">🌺</div>
+            <div class="floating-el el-3">💐</div>
+            <div class="floating-el el-4">🌸</div>
+            <div class="floating-el el-5">💎</div>
+            <div class="floating-el el-6">✨</div>
+        </div>
+    </section>
+
+    <!-- ========== BANNER INFORMATIVO ========== -->
+    <div class="info-banner">
+        <div class="banner-track">
+            <div class="banner-item"><i class="fas fa-clock"></i> Abierto hasta las 7:00 PM</div>
+            <div class="banner-item"><i class="fas fa-map-marker-alt"></i> Nicoya, Guanacaste</div>
+            <div class="banner-item"><i class="fas fa-phone"></i> 8926-5555</div>
+            <div class="banner-item"><i class="fas fa-truck"></i> Entregas a domicilio</div>
+            <div class="banner-item"><i class="fas fa-star"></i> Arreglos personalizados</div>
+            <div class="banner-item"><i class="fas fa-gift"></i> Regalos especiales</div>
+            <div class="banner-item"><i class="fas fa-clock"></i> Abierto hasta las 7:00 PM</div>
+            <div class="banner-item"><i class="fas fa-map-marker-alt"></i> Nicoya, Guanacaste</div>
+            <div class="banner-item"><i class="fas fa-phone"></i> 8926-5555</div>
+            <div class="banner-item"><i class="fas fa-truck"></i> Entregas a domicilio</div>
+            <div class="banner-item"><i class="fas fa-star"></i> Arreglos personalizados</div>
+            <div class="banner-item"><i class="fas fa-gift"></i> Regalos especiales</div>
+        </div>
+    </div>
+
+    <!-- ========== NOSOTROS ========== -->
+    <section class="nosotros" id="nosotros">
+        <div class="container">
+            <div class="nosotros-grid">
+                <div class="nosotros-images">
+                    <div class="img-main reveal-left">
+                        <img src="https://images.unsplash.com/photo-1487530811015-780f2f5e3f6e?w=600" alt="Floristería Gaia">
+                        <div class="img-badge">
+                            <span class="badge-number">10+</span>
+                            <span class="badge-text">Años de Experiencia</span>
+                        </div>
+                    </div>
+                    <div class="img-secondary reveal-right">
+                        <img src="https://images.unsplash.com/photo-1490750967868-88df5691166b?w=400" alt="Bisutería Gaia">
+                    </div>
+                    <div class="img-accent">
+                        <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=300" alt="Arreglos Gaia">
+                    </div>
+                </div>
+                <div class="nosotros-content reveal-right">
+                    <div class="section-badge">🌿 Nuestra Historia</div>
+                    <h2 class="section-title">Pasión por la Belleza Natural</h2>
+                    <p class="nosotros-text">En <strong>Floristería y Bisutería Gaia</strong>, creemos que cada flor cuenta una historia y cada accesorio refleja una personalidad única. Ubicados en el corazón de Nicoya, Guanacaste, somos tu destino favorito para encontrar la belleza en cada detalle.</p>
+                    <p class="nosotros-text">Nuestra misión es crear experiencias memorables a través de arreglos florales artesanales y bisutería exclusiva, diseñados con amor y dedicación para cada cliente especial.</p>
+                    <div class="nosotros-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">🌹</div>
+                            <div class="feature-text">
+                                <h4>Flores Frescas</h4>
+                                <p>Seleccionamos las mejores flores cada día</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💎</div>
+                            <div class="feature-text">
+                                <h4>Bisutería Artesanal</h4>
+                                <p>Piezas únicas hechas con amor</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎨</div>
+                            <div class="feature-text">
+                                <h4>Diseño Personalizado</h4>
+                                <p>Creamos según tus gustos y necesidades</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🚚</div>
+                            <div class="feature-text">
+                                <h4>Entrega a Domicilio</h4>
+                                <p>Llevamos la belleza hasta tu puerta</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contacto" class="btn-primary">
+                        <i class="fas fa-heart"></i>
+                        Conoce Más
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICIOS ========== -->
+    <section class="servicios" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🌺 Lo que Ofrecemos</div>
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-subtitle">Descubre todo lo que tenemos para hacer tus momentos especiales aún más memorables</p>
+            </div>
+            <div class="servicios-grid">
+                <div class="servicio-card reveal-up" data-delay="0">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">💐</div>
+                        <div class="card-icon-bg"></div>
+                    </div>
+                    <h3>Arreglos Florales</h3>
+                    <p>Creamos arreglos únicos para bodas, cumpleaños, aniversarios y cualquier ocasión especial que merece ser celebrada con flores.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Ramos de novia</li>
+                        <li><i class="fas fa-check"></i> Centros de mesa</li>
+                        <li><i class="fas fa-check"></i> Coronas florales</li>
+                        <li><i class="fas fa-check"></i> Arreglos fúnebres</li>
+                    </ul>
+                    <a href="#catalogo" class="card-btn">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card featured reveal-up" data-delay="100">
+                    <div class="featured-badge">⭐ Popular</div>
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">💎</div>
+                        <div class="card-icon-bg"></div>
+                    </div>
+                    <h3>Bisutería Exclusiva</h3>
+                    <p>Nuestra colección de bisutería artesanal incluye collares, pulseras, aretes y anillos diseñados para realzar tu belleza natural.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Collares artesanales</li>
+                        <li><i class="fas fa-check"></i> Pulseras y brazaletes</li>
+                        <li><i class="fas fa-check"></i> Aretes exclusivos</li>
+                        <li><i class="fas fa-check"></i> Anillos decorativos</li>
+                    </ul>
+                    <a href="#catalogo" class="card-btn">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card reveal-up" data-delay="200">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">🎁</div>
+                        <div class="card-icon-bg"></div>
+                    </div>
+                    <h3>Regalos Especiales</h3>
+                    <p>Combinamos flores y bisutería para crear el regalo perfecto que sorprenderá y emocionará a esa persona tan especial en tu vida.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Cajas sorpresa</li>
+                        <li><i class="fas fa-check"></i> Sets de regalo</li>
+                        <li><i class="fas fa-check"></i> Canastas florales</li>
+                        <li><i class="fas fa-check"></i> Regalos corporativos</li>
+                    </ul>
+                    <a href="#catalogo" class="card-btn">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card reveal-up" data-delay="300">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">💒</div>
+                        <div class="card-icon-bg"></div>
+                    </div>
+                    <h3>Decoración de Eventos</h3>
+                    <p>Transformamos cualquier espacio en un lugar mágico con nuestras decoraciones florales para bodas, quinceañeras y eventos especiales.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Decoración de bodas</li>
+                        <li><i class="fas fa-check"></i> Quinceañeras</li>
+                        <li><i class="fas fa-check"></i> Eventos corporativos</li>
+                        <li><i class="fas fa-check"></i> Fiestas temáticas</li>
+                    </ul>
+                    <a href="#contacto" class="card-btn">Cotizar <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card reveal-up" data-delay="400">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">🚚</div>
+                        <div class="card-icon-bg"></div>
+                    </div>
+                    <h3>Entrega a Domicilio</h3>
+                    <p>Llevamos tus flores y accesorios directamente a donde los necesitas, con el cuidado y la presentación que mereces.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Entrega en Nicoya</li>
+                        <li><i class="fas fa-check"></i> Zonas cercanas</li>
+                        <li><i class="fas fa-check"></i> Entrega express</li>
+                        <li><i class="fas fa-check"></i> Empaque especial</li>
+                    </ul>
+                    <a href="#contacto" class="card-btn">Solicitar <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="servicio-card reveal-up" data-delay="500">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon">🎨</div>
+                        <div class="card-icon-bg"></div>
+                    </div>
+                    <h3>Diseño Personalizado</h3>
+                    <p>¿Tienes una idea especial? Trabajamos contigo para crear arreglos y accesorios completamente personalizados según tu visión.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Consulta gratuita</li>
+                        <li><i class="fas fa-check"></i> Diseño a medida</li>
+                        <li><i class="fas fa-check"></i> Colores especiales</li>
+                        <li><i class="fas fa-check"></i> Materiales premium</li>
+                    </ul>
+                    <a href="#contacto" class="card-btn">Consultar <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CATÁLOGO ========== -->
+    <section class="catalogo" id="catalogo">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🛍️ Nuestros Productos</div>
+                <h2 class="section-title">Catálogo</h2>
+                <p class="section-subtitle">Explora nuestra selección de productos y encuentra el perfecto para ti</p>
+            </div>
+            <div class="catalogo-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> Todos
+                </button>
+                <button class="filter-btn" data-filter="flores">
+                    <i class="fas fa-seedling"></i> Flores
+                </button>
+                <button class="filter-btn" data-filter="bisuteria">
+                    <i class="fas fa-gem"></i> Bisutería
+                </button>
+                <button class="filter-btn" data-filter="regalos">
+                    <i class="fas fa-gift"></i> Regalos
+                </button>
+                <button class="filter-btn" data-filter="eventos">
+                    <i class="fas fa-calendar"></i> Eventos
+                </button>
+            </div>
+            <div class="catalogo-grid" id="catalogoGrid">
+                <!-- Flores -->
+                <div class="producto-card" data-category="flores">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1487530811015-780f2f5e3f6e?w=400" alt="Ramo de Rosas">
+                        <div class="producto-overlay">
+                            <button class="overlay-btn" onclick="addToCart('Ramo de Rosas Rojas', 15000)">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="overlay-btn" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                        <div class="producto-badge">🌹 Flores</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Ramo de Rosas Rojas</h3>
+                        <p>12 rosas rojas frescas con follaje decorativo</p>
+                        <div class="producto-footer">
+                            <span class="precio">₡15,000</span>
+                            <div class="producto-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="btn-agregar" onclick="addToCart('Ramo de Rosas Rojas', 15000)">
+                            <i class="fas fa-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="producto-card" data-category="flores">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1490750967868-88df5691166b?w=400" alt="Arreglo Primaveral">
+                        <div class="producto-overlay">
+                            <button class="overlay-btn" onclick="addToCart('Arreglo Primaveral', 22000)">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="overlay-btn" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                        <div class="producto-badge">🌺 Flores</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Arreglo Primaveral</h3>
+                        <p>Mezcla colorida de flores de temporada</p>
+                        <div class="producto-footer">
+                            <span class="precio">₡22,000</span>
+                            <div class="producto-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <button class="btn-agregar" onclick="addToCart('Arreglo Primaveral', 22000)">
+                            <i class="fas fa-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="producto-card" data-category="flores">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=400" alt="Ramo de Novia">
+                        <div class="producto-overlay">
+                            <button class="overlay-btn" onclick="addToCart('Ramo de Novia', 45000)">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="overlay-btn" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                        <div class="producto-badge nuevo">💒 Nuevo</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Ramo de Novia Premium</h3>
+                        <p>Diseño exclusivo para el día más especial</p>
+                        <div class="producto-footer">
+                            <span class="precio">₡45,000</span>
+                            <div class="producto-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="btn-agregar" onclick="addToCart('Ramo de Novia Premium', 45000)">
+                            <i class="fas fa-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+                <!-- Bisutería -->
+                <div class="producto-card" data-category="bisuteria">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400" alt="Collar Floral">
+                        <div class="producto-overlay">
+                            <button class="overlay-btn" onclick="addToCart('Collar Floral Dorado', 8500)">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="overlay-btn" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                        <div class="producto-badge">💎 Bisutería</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Collar Floral Dorado</h3>
+                        <p>Collar artesanal con detalles florales en oro</p>
+                        <div class="producto-footer">
+                            <span class="precio">₡8,500</span>
+                            <div class="producto-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="btn-agregar" onclick="addToCart('Collar Floral Dorado', 8500)">
+                            <i class="fas fa-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="producto-card" data-category="bisuteria">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400" alt="Aretes Perla">
+                        <div class="producto-overlay">
+                            <button class="overlay-btn" onclick="addToCart('Aretes de Perla', 6000)">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="overlay-btn" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                        <div class="producto-badge">✨ Bisutería</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Aretes de Perla Elegante</h3>
+                        <p>Aretes clásicos con perlas naturales</p>
+                        <div class="producto-footer">
+                            <span class="precio">₡6,000</span>
+                            <div class="producto-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="btn-agregar" onclick="addToCart('Aretes de Perla', 6000)">
+                            <i class="fas fa-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="producto-card" data-category="bisuteria">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1573408301185-9519f94f4e8e?w=400" alt="Pulsera Cristal">
+                        <div class="producto-overlay">
+                            <button class="overlay-btn" onclick="addToCart('Pulsera de Cristal', 5500)">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="overlay-btn" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                        <div class="producto-badge oferta">🔥 Oferta</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Pulsera de Cristal Rosa</h3>
+                        <p>Pulsera delicada con cristales rosados</p>
+                        <div class="producto-footer">
+                            <div>
+                                <span class="precio">₡5,500</span>
+                                <span class="precio-antes">₡7,000</span>
+                            </div>
+                            <div class="producto-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="btn-agregar" onclick="addToCart('Pulsera de Cristal', 5500)">
+                            <i class="fas fa-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+                <!-- Regalos -->
+                <div class="producto-card" data-category="regalos">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=400" alt="Caja Sorpresa">
+                        <div class="producto-overlay">
+                            <button class="overlay-btn" onclick="addToCart('Caja Sorpresa Floral', 35000)">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="overlay-btn" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                        <div class="producto-badge">🎁 Regalo</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Caja Sorpresa Floral</h3>
+                        <p>Caja con flores y accesorios de bisutería</p>
+                        <div class="producto-footer">
+                            <span class="precio">₡35,000</span>
+                            <div class="producto-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="btn-agregar" onclick="addToCart('Caja Sorpresa Floral', 35000)">
+                            <i class="fas fa-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+                <div class="producto-card" data-category="regalos">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Set Romántico">
+                        <div class="producto-overlay">
+                            <button class="overlay-btn" onclick="addToCart('Set Romántico', 55000)">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="overlay-btn" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                        <div class="producto-badge nuevo">💕 Especial</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Set Romántico Completo</h3>
+                        <p>Rosas + collar + aretes para sorprender</p>
+                        <div class="producto-footer">
+                            <span class="precio">₡55,000</span>
+                            <div class="producto-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="btn-agregar" onclick="addToCart('Set Romántico Completo', 55000)">
+                            <i class="fas fa-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+                <!-- Eventos -->
+                <div class="producto-card" data-category="eventos">
+                    <div class="producto-img">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400" alt="Decoración Boda">
+                        <div class="producto-overlay">
+                            <button class="overlay-btn" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                        <div class="producto-badge">💒 Evento</div>
+                    </div>
+                    <div class="producto-info">
+                        <h3>Decoración de Boda</h3>
+                        <p>Paquete completo de decoración floral</p>
+                        <div class="producto-footer">
+                            <span class="precio">Cotizar</span>
+                            <div class="producto-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="btn-agregar" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> Consultar precio
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALERÍA ========== -->
+    <section class="galeria" id="galeria">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">📸 Nuestro Trabajo</div>
+                <h2 class="section-title">Galería</h2>
+                <p class="section-subtitle">Una muestra de nuestras creaciones más hermosas</p>
+            </div>
+            <div class="galeria-grid">
+                <div class="galeria-item grande" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1487530811015-780f2f5e3f6e?w=800" alt="Galería 1">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Ver imagen</span>
+                    </div>
+                </div>
+                <div class="galeria-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1490750967868-88df5691166b?w=400" alt="Galería 2">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Ver imagen</span>
+                    </div>
+                </div>
+                <div class="galeria-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=400" alt="Galería 3">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Ver imagen</span>
+                    </div>
+                </div>
+                <div class="galeria-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400" alt="Galería 4">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Ver imagen</span>
+                    </div>
+                </div>
+                <div class="galeria-item grande" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800" alt="Galería 5">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Ver imagen</span>
+                    </div>
+                </div>
+                <div class="galeria-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=400" alt="Galería 6">
+                    <div class="galeria-overlay">
+                        <i class="fas fa-expand"></i>
+                        <span>Ver imagen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LIGHTBOX ========== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-prev" id="lightboxPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImg">
+        </div>
+        <button class="lightbox-next" id="lightboxNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- ========== CONTADOR ========== -->
+    <section class="contador">
+        <div class="container">
+            <div class="contador-grid">
+                <div class="contador-item reveal-up">
+                    <div class="contador-icon">🌹</div>
+                    <div class="contador-number" data-target="1500">0</div>
+                    <div class="contador-label">Flores Vendidas</div>
+                </div>
+                <div class="contador-item reveal-up" data-delay="100">
+                    <div class="contador-icon">😊</div>
+                    <div class="contador-number" data-target="500">0</div>
+                    <div class="contador-label">Clientes Felices</div>
+                </div>
+                <div class="contador-item reveal-up" data-delay="200">
+                    <div class="contador-icon">💒</div>
+                    <div class="contador-number" data-target="80">0</div>
+                    <div class="contador-label">Bodas Decoradas</div>
+                </div>
+                <div class="contador-item reveal-up" data-delay="300">
+                    <div class="contador-icon">⭐</div>
+                    <div class="contador-number" data-target="10">0</div>
+                    <div class="contador-label">Años de Experiencia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIOS ========== -->
+    <section class="testimonios" id="testimonios">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">💬 Lo que Dicen</div>
+                <h2 class="section-title">Opiniones de Clientes</h2>
+                <p class="section-subtitle">La satisfacción de nuestros clientes es nuestra mayor recompensa</p>
+            </div>
+            <div class="testimonios-slider" id="testimoniosSlider">
+                <div class="testimonio-card active">
+                    <div class="testimonio-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonio-text">"Los arreglos florales de Gaia son simplemente espectaculares. Pedí el ramo de novia y quedé completamente enamorada. ¡Superaron todas mis expectativas!"</p>
+                    <div class="testimonio-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>María González</h4>
+                            <span>Novia feliz 💒</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-card">
+                    <div class="testimonio-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonio-text">"Compré unos aretes y un collar para mi mamá en su cumpleaños. La bisutería es de excelente calidad y muy bonita. Mi mamá quedó encantada. ¡Gracias Gaia!"</p>
+                    <div class="testimonio-author">
+                        <div class="author-avatar">C</div>
+                        <div class="author-info">
+                            <h4>Carlos Rodríguez</h4>
+                            <span>Cliente frecuente ⭐</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-card">
+                    <div class="testimonio-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonio-text">"Contraté a Gaia para decorar mi quinceañera y fue la mejor decisión. Todo quedó precioso, las flores eran frescas y el diseño era exactamente lo que soñé."</p>
+                    <div class="testimonio-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Andrea Mora</h4>
+                            <span>Quinceañera feliz 🎉</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonio-card">
+                    <div class="testimonio-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonio-text">"Excelente servicio y atención al cliente. Pedí flores para el día de la madre y llegaron perfectas y a tiempo. Sin duda volveré a comprar aquí."</p>
+                    <div class="testimonio-author">
+                        <div class="author-avatar">L</div>
+                        <div class="author-info">
+                            <h4>Luis Vargas</h4>
+                            <span>Cliente satisfecho 🌹</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonios-controls">
+                <button class="test-btn" id="testPrev"><i class="fas fa-chevron-left"></i></button>
+                <div class="test-dots" id="testDots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="test-btn" id="testNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">📞 Estamos Aquí</div>
+                <h2 class="section-title">Contáctanos</h2>
+                <p class="section-subtitle">Estamos listos para ayudarte a crear momentos especiales</p>
+            </div>
+            <div class="contacto-grid">
+                <div class="contacto-info reveal-left">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-content">
+                            <h4>Ubicación</h4>
+                            <p>50 metros este continuo del Bar Olman, Nicoya del Hotel Yenny</p>
+                            <p>Nicoya, Guanacaste, Costa Rica</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-phone"></i></div>
+                        <div class="info-content">
+                            <h4>Teléfono</h4>
+                            <p><a href="tel:+50689265555">8926-5555</a></p>
+                            <p>Llamadas y WhatsApp</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-clock"></i></div>
+                        <div class="info-content">
+                            <h4>Horario</h4>
+                            <p>Lunes a Sábado</p>
+                            <p>8:00 AM - 7:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-share-alt"></i></div>
+                        <div class="info-content">
+                            <h4>Redes Sociales</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link whatsapp" onclick="openWhatsApp()"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" class="social-link tiktok"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-whatsapp-large" onclick="openWhatsApp()">
+                        <i class="fab fa-whatsapp"></i>
+                        Chatear por WhatsApp
+                    </button>
+                </div>
+                <div class="contacto-form reveal-right">
+                    <form id="contactForm" onsubmit="submitForm(event)">
+                        <div class="form-header">
+                            <h3>Envíanos un Mensaje</h3>
+                            <p>Te responderemos lo antes posible</p>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">
+                                    <i class="fas fa-user"></i> Nombre
+                                </label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                                <span class="form-error" id="nombreError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">
+                                    <i class="fas fa-phone"></i> Teléfono
+                                </label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required>
+                                <span class="form-error" id="telefonoError"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Email
+                            </label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="servicio">
+                                <i class="fas fa-spa"></i> Servicio de Interés
+                            </label>
+                            <select id="servicio" name="servicio">
+                                <option value="">Selecciona un servicio</option>
+                                <option value="arreglos">Arreglos Florales</option>
+                                <option value="bisuteria">Bisutería</option>
+                                <option value="regalos">Regalos Especiales</option>
+                                <option value="eventos">Decoración de Eventos</option>
+                                <option value="personalizado">Diseño Personalizado</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">
+                                <i class="fas fa-comment"></i> Mensaje
+                            </label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos qué necesitas..." required></textarea>
+                            <span class="form-error" id="mensajeError"></span>
+                        </div>
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Enviar Mensaje</span>
+                        </button>
+                        <div class="form-success" id="formSuccess">
+                            <i class="fas fa-check-circle"></i>
+                            <p>¡Mensaje enviado! Te contactaremos pronto 🌸</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="mapa-container reveal-up">
+                <div class="mapa-header">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Encuéntranos en Nicoya</h3>
+                </div>
+                <div class="mapa-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.8!2d-85.4527!3d10.1426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDA4JzMzLjQiTiA4NcKwMjcnMDkuNyJX!5e0!3m2!1ses!2scr!4v1234567890"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        title="Ubicación Floristería Gaia">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <span class="logo-icon">🌸</span>
+                            <div>
+                                <span class="logo-main">Gaia</span>
+                                <span class="logo-sub">Floristería & Bisutería</span>
+                            </div>
+                        </div>
+                        <p class="footer-desc">Creando momentos especiales con flores y bisutería exclusiva en el corazón de Nicoya, Guanacaste.</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon" onclick="openWhatsApp()"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Navegación</h4>
+                        <ul>
+                            <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                            <li><a href="#nosotros"><i class="fas fa-chevron-right"></i> Nosotros</a></li>
+                            <li><a href="#servicios"><i class="fas fa-chevron-right"></i> Servicios</a></li>
+                            <li><a href="#catalogo"><i class="fas fa-chevron-right"></i> Catálogo</a></li>
+                            <li><a href="#galeria"><i class="fas fa-chevron-right"></i> Galería</a></li>
+                            <li><a href="#contacto"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Servicios</h4>
+                        <ul>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Arreglos Florales</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Bisutería</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Regalos Especiales</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Decoración Eventos</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Entrega a Domicilio</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i> Diseño Personalizado</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contacto</h4>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>50m este del Bar Olman, Nicoya, Guanacaste</p>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p><a href="tel:+50689265555">8926-5555</a></p>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-clock"></i>
+                            <p>Lun - Sáb: 8:00 AM - 7:00 PM</p>
+                        </div>
+                                               <div class="footer-newsletter">
+                            <h5>Suscríbete</h5>
+                            <div class="newsletter-form">
+                                <input type="email" placeholder="Tu email...">
+                                <button onclick="subscribeNewsletter()">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Floristería y Bisutería Gaia. Todos los derechos reservados.</p>
+                    <p>Hecho con <span class="heart">❤️</span> en Nicoya, Guanacaste 🇨🇷</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== CARRITO MODAL ========== -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-overlay" onclick="closeCart()"></div>
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-bag"></i> Mi Carrito</h3>
+                <button class="cart-close" onclick="closeCart()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-body" id="cartBody">
+                <div class="cart-empty" id="cartEmpty">
+                    <div class="empty-icon">🛍️</div>
+                    <p>Tu carrito está vacío</p>
+                    <a href="#catalogo" onclick="closeCart()">Ver productos</a>
+                </div>
+                <div class="cart-items" id="cartItems"></div>
+            </div>
+            <div class="cart-footer" id="cartFooter" style="display:none;">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-price" id="totalPrice">₡0</span>
+                </div>
+                <button class="btn-checkout" onclick="checkout()">
+                    <i class="fab fa-whatsapp"></i>
+                    Pedir por WhatsApp
+                </button>
+                <button class="btn-clear-cart" onclick="clearCart()">
+                    <i class="fas fa-trash"></i>
+                    Vaciar carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="whatsapp-float" onclick="openWhatsApp()">
+        <div class="whatsapp-tooltip">¡Escríbenos!</div>
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-pulse"></div>
+    </div>
+
+   
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+   
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
